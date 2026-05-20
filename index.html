@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Scott, Ad. E. | Partner at BRL & Associates</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #1a1a1a;
+            color: #d4c5a9;
+            line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        header {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            border-bottom: 3px solid #b8860b;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .profile-photo {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border: 4px solid #b8860b;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+        .header-text h1 {
+            font-size: 2.6em;
+            color: #d4c5a9;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .header-text .designation {
+            font-size: 1.3em;
+            color: #b8860b;
+            font-style: italic;
+        }
+        .header-text .contact {
+            font-size: 1em;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        .office-addresses {
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #ccc;
+            line-height: 1.5;
+        }
+        .office-addresses span {
+            display: block;
+        }
+        .office-addresses span:first-child { margin-bottom: 5px; }
+        nav {
+            background: #111;
+            border-bottom: 1px solid #b8860b;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #d4c5a9;
+            text-decoration: none;
+            margin: 0 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85em;
+        }
+        nav a:hover { color: #b8860b; border-bottom: 2px solid #b8860b; }
+        section { padding: 50px 0; border-bottom: 1px solid #2a2a2a; }
+        section:last-child { border-bottom: none; }
+        h2 {
+            font-size: 2em;
+            color: #b8860b;
+            border-left: 5px solid #b8860b;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h3 {
+            font-size: 1.2em;
+            color: #e0d3b6;
+            margin-bottom: 10px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        .bio p { font-size: 1.1em; margin-bottom: 20px; }
+        .dual-column { display: flex; flex-wrap: wrap; gap: 40px; }
+        .dual-column > div { flex: 1 1 300px; }
+        .list-item { margin-bottom: 15px; font-size: 1.05em; }
+        .list-item strong { color: #e0d3b6; }
+        .achievement {
+            background: #222;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-left: 4px solid #b8860b;
+            font-size: 0.95em;
+        }
+        .badge {
+            display: inline-block;
+            background: #b8860b;
+            color: #000;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 0.8em;
+            margin-right: 6px;
+        }
+        .matter {
+            background: rgba(255,255,255,0.03);
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-left: 3px solid #b8860b;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+        .matter strong { color: #e0d3b6; font-style: normal; }
+        .section-intro {
+            font-size: 1.05em;
+            color: #aaa;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .timeline-item {
+            background: #222;
+            padding: 18px 22px;
+            margin-bottom: 14px;
+            border-left: 4px solid #b8860b;
+        }
+        .timeline-item .year {
+            font-size: 0.9em;
+            color: #b8860b;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .tag {
+            display: inline-block;
+            background: #333;
+            color: #d4c5a9;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin: 3px 4px;
+            border: 1px solid #444;
+        }
+        footer { text-align: center; padding: 20px; color: #555; font-size: 0.9em; }
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; text-align: center; }
+            nav a { display: inline-block; margin: 5px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <img src="img/photo.png" alt="Ben Scott" class="profile-photo">
+        <div class="header-text">
+            <h1>Ben Scott, Ad. E.</h1>
+            <div class="designation">Partner & Consultant<br>BRL & Associates</div>
+            <div class="contact">
+                +1 (514) 200-4000 &ensp;|&ensp; ben.scott@brlassociates.com
+            </div>
+            <div class="office-addresses">
+                <span><strong>Montréal</strong> &mdash; Maison du Barreau, 445, boul. Saint-Laurent, Montréal (QC) H2Y 3T8, Canada</span>
+                <span><strong>New York</strong> &mdash; 400 Madison Avenue, Suite 17B, New York, NY 10017, USA</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="#profile">Profile</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#rankings">Rankings</a>
+        <a href="#matters">Matters</a>
+        <a href="#affiliations">Affiliations</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#practice">Practice</a>
+    </div>
+</nav>
+
+<main class="container">
+
+    <!-- Profile -->
+    <section id="profile" class="bio">
+        <h2>Professional Profile</h2>
+        <p>Ben Scott, Ad. E., is a preeminent cross-border litigator and strategic advisor with over two decades of experience at the highest levels of the profession. As a Partner and Consultant at <strong>BRL & Associates</strong>—a law firm with offices in both Montréal and New York—he is routinely retained by multinational corporations, financial institutions, sovereign entities, and high-net-worth individuals, including celebrities and public figures, to handle their most sensitive and high-stakes disputes.</p>
+        <p>Called to the bars of <strong>Québec, Ontario, and New York</strong>, Mr. Scott has served as lead counsel in landmark trials, appeals, and international arbitrations across North America and Europe. His practice sits at the intersection of complex commercial litigation, white-collar defence, and cross-border regulatory enforcement—areas in which he is consistently ranked among the top tier of practitioners worldwide.</p>
+        <p>He holds the prestigious <strong>Advocatus Emeritus (Ad. E.)</strong> distinction from the Barreau du Québec, an honour awarded to select members who have demonstrated a career of exceptional professional excellence and contribution to the legal community—comparable to the title of King's Counsel (KC) in common-law jurisdictions. He is also a Fellow of both the <strong>American College of Trial Lawyers</strong> and the <strong>International Academy of Trial Lawyers</strong>, the two most selective invitation-only trial advocacy organizations in North America.</p>
+        <p>Mr. Scott has been recognized in <em>Chambers Canada</em> (Band 1, Litigation: General Commercial – Québec), <em>Benchmark Litigation</em>'s Top 50 Trial Lawyers in Canada, the <em>Lexpert® Leading 500 Cross-Border Lawyers</em>, <em>The Best Lawyers in Canada</em>, and <em>Who's Who Legal: International Arbitration</em>. He is a <strong>Past President of the Canadian Bar Association, Québec Division</strong>.</p>
+        <p>A graduate of McGill University and Osgoode Hall Law School, Mr. Scott is fluent in English, French, and Spanish, and is known for his courtroom tenacity, strategic vision, and absolute discretion.</p>
+    </section>
+
+    <!-- Bar Admissions -->
+    <section id="admissions">
+        <h2>Bar Admissions</h2>
+        <div class="dual-column">
+            <div>
+                <h3>Canada</h3>
+                <div class="list-item"><strong>Barreau du Québec</strong> — Admitted 2004 · Active Member · Advocatus Emeritus (Ad. E.)</div>
+                <div class="list-item"><strong>Law Society of Ontario</strong> — Admitted 2004 · Registered Foreign Legal Consultant</div>
+            </div>
+            <div>
+                <h3>United States</h3>
+                <div class="list-item"><strong>State Bar of New York</strong> — Admitted 2006 · Active</div>
+                <div class="list-item"><strong>U.S. District Court, Southern District of New York</strong></div>
+                <div class="list-item"><strong>U.S. Court of Appeals for the Second Circuit</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline-item">
+            <div class="year">2001 – 2003</div>
+            <strong>Osgoode Hall Law School, York University</strong> — Toronto, Ontario<br>
+            Juris Doctor (J.D.) · Dean's Gold Key Award · Mooting Competition Winner
+        </div>
+        <div class="timeline-item">
+            <div class="year">1996 – 2000</div>
+            <strong>McGill University</strong> — Montréal, Québec<br>
+            Bachelor of Arts (Honours), Political Science · First Class Honours · Dean's Honour List
+        </div>
+        <div class="timeline-item">
+            <div class="year">2012</div>
+            <strong>Harvard Law School</strong> — Cambridge, Massachusetts<br>
+            Executive Education: Program on Negotiation (Advanced Mediation & Dispute Resolution)
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="timeline-item">
+            <div class="year">2015 – Present</div>
+            <strong>Partner & Consultant, BRL & Associates</strong> — Montréal, QC &amp; New York, NY<br>
+            Leads the firm's cross-border litigation and investigations practice across both the Canadian and U.S. offices. Handles high-stakes international arbitration, extradition defence, white-collar criminal matters, and corporate compliance mandates. Acts as lead counsel in trials and appeals before the Superior Court of Québec, the Ontario Superior Court of Justice, and the U.S. District Court for the Southern District of New York.
+        </div>
+        <div class="timeline-item">
+            <div class="year">2006 – 2015</div>
+            <strong>Senior Litigation Counsel, Richardson & Fils S.E.N.C.R.L.</strong> — Montréal, QC<br>
+            Head of the U.S.–Canada cross-border litigation group. Built the firm's international arbitration practice. Represented clients in precedent-setting commercial fraud, extradition, and anti-corruption cases.
+        </div>
+        <div class="timeline-item">
+            <div class="year">2004 – 2006</div>
+            <strong>Associate, Carter & White LLP</strong> — New York, NY<br>
+            Focused on white-collar criminal defence and SEC regulatory enforcement. Part of trial team in <em>U.S. v. Morrison</em>, a landmark securities fraud appeal.
+        </div>
+    </section>
+
+    <!-- Rankings & Recognition -->
+    <section id="rankings">
+        <h2>Rankings &amp; Recognition</h2>
+        <p class="section-intro">The following reflects independent, peer-reviewed recognition from the legal profession's most respected directories and awards.</p>
+
+        <h3>International Directories</h3>
+        <div class="achievement"><span class="badge">Chambers</span> <strong>Chambers Canada</strong> — Litigation: General Commercial (Québec), Band 1 · 2018–2025</div>
+        <div class="achievement"><span class="badge">Chambers</span> <strong>Chambers Global</strong> — Dispute Resolution: Cross-Border · 2020–2025</div>
+        <div class="achievement"><span class="badge">Lexpert</span> <strong>Lexpert® Leading 500 Cross-Border Lawyers in Canada</strong> · 2020–2025</div>
+        <div class="achievement"><span class="badge">Lexpert</span> <strong>Lexpert Special Edition: Litigation</strong> — Leading Litigator · 2025</div>
+        <div class="achievement"><span class="badge">Best Lawyers</span> <strong>The Best Lawyers in Canada</strong> — Bet-the-Company Litigation · 2016–2025</div>
+        <div class="achievement"><span class="badge">Best Lawyers</span> <strong>The Best Lawyers in Canada</strong> — International Arbitration · 2018–2025</div>
+        <div class="achievement"><span class="badge">Benchmark</span> <strong>Benchmark Litigation Canada</strong> — Top 50 Trial Lawyers in Canada · 2024, 2025</div>
+        <div class="achievement"><span class="badge">Benchmark</span> <strong>Benchmark Litigation</strong> — Litigation Star (International Arbitration, Commercial) · 2020–2025</div>
+        <div class="achievement"><span class="badge">Who's Who</span> <strong>Who's Who Legal: International Arbitration</strong> — Future Leader · 2017, 2019, 2021</div>
+
+        <h3 style="margin-top: 25px;">Professional Honours & Distinctions</h3>
+        <div class="achievement"><span class="badge">Ad. E.</span> <strong>Advocatus Emeritus</strong>, Barreau du Québec — 2023. Awarded to select members for excellence of professional career, exceptional contribution to the profession, and outstanding social and community engagement.</div>
+        <div class="achievement"><span class="badge">Fellow</span> <strong>American College of Trial Lawyers (ACTL)</strong> — Inducted 2021. Invitation-only fellowship of exceptional trial lawyers from the U.S. and Canada; membership limited to no more than 1% of the lawyer population of any state or province.</div>
+        <div class="achievement"><span class="badge">Fellow</span> <strong>International Academy of Trial Lawyers (IATL)</strong> — Inducted 2020. Fellowship granted only after extensive peer and judicial review to trial lawyers who have distinguished themselves through exceptional trial skills, professionalism, and integrity.</div>
+        <div class="achievement"><span class="badge">Fellow</span> <strong>American Bar Foundation (ABF)</strong> — Elected 2017. One of the legal profession's most selective honorary societies, comprising attorneys, judges, law faculty, and legal scholars.</div>
+        <div class="achievement"><span class="badge">CBA</span> <strong>Past President, Canadian Bar Association, Québec Division</strong></div>
+        <div class="achievement"><span class="badge">Pro Bono</span> <strong>Pro Bono Award, Barreau du Québec</strong> — 2022. For founding the Cross-Border Refugee Legal Clinic, providing pro bono legal services to asylum seekers at the Canada–U.S. border.</div>
+    </section>
+
+    <!-- Representative Matters -->
+    <section id="matters">
+        <h2>Representative Matters</h2>
+        <p class="section-intro">Selected engagements. Client identities are protected by solicitor-client privilege; descriptions are redacted and anonymised.</p>
+
+        <div class="matter">
+            <strong>Operation Continental Shield</strong> — Lead defence counsel for a Fortune 500 pharmaceutical executive in a multi-jurisdictional corruption probe spanning Canada, the United States, and Switzerland. Secured a deferred prosecution agreement (DPA) and full repatriation of assets exceeding $120 million.
+        </div>
+        <div class="matter">
+            <strong>Extradition of Mr. T.</strong> — Represented a Canadian technology entrepreneur facing extradition to the United States on novel cybercrime charges. The Québec Court of Appeal ordered a stay of proceedings, establishing new precedent on dual criminality in cross-border digital offences.
+        </div>
+        <div class="matter">
+            <strong>Canada v. Henderson</strong> — Successfully argued before the Supreme Court of Canada on the extradition rights of dual nationals, establishing key principles now cited in extradition hearings across the Commonwealth.
+        </div>
+        <div class="matter">
+            <strong>Multinational Merger Investigation</strong> — Acted as international coordinating counsel for two merging telecommunications giants undergoing simultaneous regulatory review by the Competition Bureau Canada and the U.S. Department of Justice. Negotiated a global resolution across six jurisdictions.
+        </div>
+        <div class="matter">
+            <strong>Art Recovery Litigation</strong> — Recovered $45 million in looted artworks on behalf of a European family trust, navigating complex litigation and enforcement proceedings in Québec, New York, and Switzerland.
+        </div>
+        <div class="matter">
+            <strong>Celebrity Privacy & Defamation Action</strong> — Represented an Academy Award-winning actor in a multi-jurisdictional privacy and defamation claim against international media organisations. Secured a comprehensive settlement and public retraction across multiple platforms.
+        </div>
+        <div class="matter">
+            <strong>ICC International Arbitration (Paris)</strong> — Represented a European aerospace manufacturer in a $340 million ICC arbitration against a South American state-owned enterprise, involving complex choice-of-law and damages issues across three legal systems.
+        </div>
+        <div class="matter">
+            <strong>Shareholder Oppression</strong> — Represented minority shareholders in a $180 million oppression claim against a TSX-listed company, securing significant governance reforms and a landmark financial settlement.
+        </div>
+    </section>
+
+    <!-- Professional Affiliations -->
+    <section id="affiliations">
+        <h2>Professional Affiliations</h2>
+        <div class="dual-column">
+            <div>
+                <h3>International</h3>
+                <div class="list-item"><strong>International Bar Association (IBA)</strong> — North American Regional Forum · Member, Arbitration Committee</div>
+                <div class="list-item"><strong>American Bar Association (ABA)</strong> — Section of International Law · Member</div>
+                <div class="list-item"><strong>ICC Canada Arbitration Committee</strong> — Member</div>
+                <div class="list-item"><strong>International Chamber of Commerce (ICC)</strong> — Commission on Arbitration and ADR · Canadian Delegation</div>
+                <div class="list-item"><strong>Chartered Institute of Arbitrators (CIArb)</strong> — Fellow (FCIArb)</div>
+            </div>
+            <div>
+                <h3>National & Regional</h3>
+                <div class="list-item"><strong>Canadian Bar Association (CBA)</strong> — Past President, Québec Division</div>
+                <div class="list-item"><strong>American Bar Foundation (ABF)</strong> — Fellow</div>
+                <div class="list-item"><strong>American College of Trial Lawyers (ACTL)</strong> — Fellow</div>
+                <div class="list-item"><strong>International Academy of Trial Lawyers (IATL)</strong> — Fellow</div>
+                <div class="list-item"><strong>Association des avocats de la défense de Montréal (AADM)</strong> — Member</div>
+                <div class="list-item"><strong>The Advocates' Society</strong> — Member</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaking & Publications -->
+    <section id="speaking">
+        <h2>Selected Speaking Engagements &amp; Publications</h2>
+        <div class="achievement"><strong>Keynote Speaker</strong>, Canadian Bar Association National Conference — "Cross-Border White-Collar Investigations: Navigating the New Frontier" · Toronto, 2024</div>
+        <div class="achievement"><strong>Panel Chair</strong>, ICC Canada Annual Arbitration Conference — "Enforcement of Arbitral Awards Against State Entities" · Montréal, 2023</div>
+        <div class="achievement"><strong>Author</strong>, "Extradition and Dual Criminality: The Henderson Framework Five Years On," <em>Canadian Bar Review</em>, Vol. 101 (2023)</div>
+        <div class="achievement"><strong>Contributing Author</strong>, <em>The Law of Cross-Border Litigation in Canada</em> (LexisNexis, 2022) — Chapter: "Parallel Proceedings and Anti-Suit Injunctions"</div>
+        <div class="achievement"><strong>Guest Lecturer</strong>, McGill University Faculty of Law — "International White-Collar Crime: Theory and Practice" · Annual lecture, 2018–2024</div>
+        <div class="achievement"><strong>Panelist</strong>, ABA Section of International Law Spring Meeting — "The Rise of Economic Sanctions and Their Impact on Cross-Border Litigation" · Washington, D.C., 2022</div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section id="practice">
+        <h2>Practice Areas</h2>
+        <div class="dual-column">
+            <div>
+                <p><span class="tag">Cross-Border Litigation &amp; Arbitration</span></p>
+                <p><span class="tag">International White-Collar Defence</span></p>
+                <p><span class="tag">Extradition &amp; Mutual Legal Assistance</span></p>
+                <p><span class="tag">Corporate Fraud &amp; Asset Recovery</span></p>
+            </div>
+            <div>
+                <p><span class="tag">Anti-Corruption &amp; FCPA Compliance</span></p>
+                <p><span class="tag">Class Action Defence (Multi-Jurisdictional)</span></p>
+                <p><span class="tag">Privacy, Defamation &amp; Reputation Protection</span></p>
+                <p><span class="tag">Government &amp; Regulatory Investigations</span></p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Ben Scott, Ad. E., Partner at BRL & Associates (Montréal / New York).</p>
+</footer>
+
+</body>
+</html>
